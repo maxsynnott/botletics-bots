@@ -6,10 +6,8 @@ const { Chess } = require("chess.js");
 const app = express();
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
 
 app.post("/move", (req, res) => {
-	console.log(req.body);
 	const { fen } = req.body;
 	const chess = new Chess(fen);
 
